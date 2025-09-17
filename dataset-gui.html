@@ -1,0 +1,351 @@
+<html lang="en" data-lt-installed="true">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Koshchei Systems</title>
+
+    <link rel="canonical" href="https://roman-koshchei.github.io" />
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Koshchei Systems" />
+    <meta
+      name="description"
+      content="We are making autonomous systems which can run in real-time on cheap (100-150$) hardware to detect and track objects."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="Koshchei Systems" />
+    <meta property="og:title" content="Koshchei Systems" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://roman-koshchei.github.io" />
+    <meta
+      property="og:description"
+      content="We are making autonomous systems which can run in real-time on cheap (100-150$) hardware to detect and track objects."
+    />
+    <meta
+      property="og:image"
+      content="https://roman-koshchei.github.io/assets/dataset-gui-og.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:url" content="https://roman-koshchei.github.io" />
+    <meta property="twitter:title" content="Koshchei Systems" />
+    <meta
+      property="twitter:description"
+      content="We are making autonomous systems which can run in real-time on cheap (100-150$) hardware to detect and track objects."
+    />
+    <meta
+      property="twitter:image"
+      content="https://roman-koshchei.github.io/assets/dataset-gui-og.png"
+    />
+
+    <!-- Microdata -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "website",
+        "name": "Koshchei Systems",
+        "url": "https://roman-koshchei.github.io",
+        "description": "Developing autonomous systems to neutralize long range drone threats. Current focus is to train object detection AI model and create real-time tracking ..."
+      }
+    </script>
+
+    <!-- <link rel="alternate" type="application/atom+xml" href="/feed/" />
+    <link rel="alternate" type="application/rss+xml" href="/feed/?type=rss" /> -->
+
+    <link
+      rel="shortcut icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E⭕%3C/text%3E%3C/svg%3E"
+    />
+
+    <style>
+      /* Font */
+      @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+      /* Settings */
+      :root {
+        --color-dark: #1a1a1a;
+        --color-light: #fafafa;
+        --color-primary: #1a8fe3;
+        --size-step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
+        --size-step-1: clamp(1.25rem, calc(1.16rem + 0.43vw), 1.5rem);
+        --size-step-2: clamp(1.56rem, calc(1.41rem + 0.76vw), 2rem);
+        --size-step-3: clamp(1.95rem, calc(1.71rem + 1.24vw), 2.66rem);
+        --size-step-4: clamp(2.44rem, calc(2.05rem + 1.93vw), 3.55rem);
+        --spacing: 1.5rem;
+        --font-stack: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+          "Noto Color Emoji";
+        --code-background-color: var(--color-dark);
+        --code-color: var(--color-light);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --color-dark: #fafafa;
+          --color-light: #1a1a1a;
+        }
+      }
+      /* HTML Styles */
+      body {
+        background: var(--color-light);
+        color: var(--color-dark);
+        padding: var(--spacing)
+          clamp(calc(var(--spacing) / 2), 5vw, calc(var(--spacing) * 3));
+        font-family: var(--font-stack);
+        font-size: var(--size-step-1);
+        line-height: 1.7;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      header,
+      main,
+      footer {
+        width: 100%;
+      }
+      header {
+        padding-bottom: var(--spacing);
+      }
+      main {
+        flex: 1;
+        padding-bottom: calc(var(--spacing) * 2);
+      }
+      a {
+        color: currentColor;
+        -webkit-text-decoration-color: var(--color-primary);
+        text-decoration-color: var(--color-primary);
+        text-decoration-thickness: 0.2ex;
+        text-underline-offset: 0.3ex;
+      }
+      a:hover {
+        text-decoration-thickness: 0.3ex;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-weight: 800;
+        line-height: 1.3;
+        text-wrap: balance;
+      }
+      h1 {
+        font-size: var(--size-step-4);
+      }
+      h2 {
+        font-size: var(--size-step-3);
+      }
+      h3 {
+        font-size: var(--size-step-2);
+      }
+      h4 {
+        font-size: var(--size-step-1);
+      }
+      h5 {
+        font-size: var(--size-step-0);
+      }
+      ul,
+      ol {
+        -webkit-padding-start: var(--spacing);
+        padding-inline-start: var(--spacing);
+      }
+      li {
+        --flow-space: var(--spacing);
+        margin-block-start: var(--flow-space, var(--spacing));
+      }
+      blockquote {
+        -webkit-padding-start: var(--spacing);
+        padding-inline-start: var(--spacing);
+        -webkit-border-start: 0.3em solid;
+        border-inline-start: 0.3em solid;
+        font-style: italic;
+        font-size: var(--size-step-1);
+      }
+      /* Utilities */
+      content > div > * {
+        -webkit-margin-before: var(--flow-space, var(--spacing));
+        margin-block-start: var(--flow-space, var(--spacing));
+      }
+      /* Flow and rythm */
+      :is(h1, h2, h3, h4, h5, blockquote) {
+        --flow-space: calc(var(--spacing) * 2);
+        margin-block-end: calc(var(--spacing) / 2);
+      }
+      :is(h1, h2, h3, h4, h5) + * {
+        --flow-space: calc(var(--spacing) / 3);
+      }
+      :is(h1, h2, h3, h4, h5) + :where(h2, h3, h4, h5) {
+        --flow-space: calc(var(--spacing) * 2);
+      }
+
+      /* Line lengths */
+      main,
+      header,
+      footer {
+        max-width: 65ch;
+        margin-inline: auto;
+      }
+      blockquote {
+        max-width: 50ch;
+      }
+      h1 {
+        max-width: 24ch;
+      }
+      h2,
+      h3 {
+        max-width: 32ch;
+      }
+      /* Bear Content */
+      .title {
+        text-decoration: none;
+      }
+      .title h1 {
+        font-size: var(--size-step-2);
+      }
+      nav p {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing);
+        row-gap: 0;
+      }
+      ul.blog-posts {
+        list-style-type: none;
+        padding: unset;
+      }
+      ul.blog-posts li {
+        display: flex;
+        flex-direction: column;
+      }
+      @media screen and (min-width: 600px) {
+        ul.blog-posts li {
+          flex-direction: row;
+          gap: calc(var(--spacing) / 2);
+        }
+      }
+      ul.blog-posts li span {
+        min-width: 11ch;
+      }
+      .highlight,
+      .code {
+        padding: 1px var(--spacing);
+        background-color: var(--code-background-color);
+        color: var(--code-color);
+        border-radius: 3px;
+        overflow-x: auto;
+        line-height: 1.2;
+      }
+      table {
+        width: 100%;
+      }
+      th {
+        text-align: left;
+      }
+    </style>
+
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="15246c37-35eb-455e-8e2d-96fd2fe6d419"
+    ></script>
+  </head>
+
+  <body class="home">
+    <header>
+      <a class="title" href="/">
+        <h1>Koshchei Systems</h1>
+      </a>
+      <nav>
+        <p>
+          <a href="/">Home</a>
+        </p>
+      </nav>
+    </header>
+    <main>
+      <h1>Object Detection Dataset GUI</h1>
+      <p>
+        To train a good model the data plays big part and I needed a way to
+        visualize my bounding boxes to inspect and correct from time to time.
+      </p>
+      <p>
+        I am making a new version of a tool for that, rewriting my vibe coded
+        slop (<a href="#vibe-coded-slop-version">see old version section</a>).
+        You can see draft of the tool features on
+        <a
+          href="https://www.tldraw.com/f/m8OCGiuyjl3Cmc6yLPRm5?d=v-685.857.2141.1161.OuBm7gPS2S1OyYIYz8VYb"
+        >
+          Board
+        </a>
+        and some of pictures below:
+      </p>
+
+      <img
+        src="/assets/dataset-gui-1.png"
+        alt="Dataset GUI list of images and their detections"
+      />
+      <img
+        src="/assets/dataset-gui-2.png"
+        alt="Dataset GUI editing detections"
+      />
+
+      <h2 id="how-to-get">How to get?</h2>
+
+      <p>
+        Plan is you will be able to <strong>buy lifetime access</strong> to the
+        private <strong>repository</strong> with all the code regarding this
+        tool. I don't yet know the exact price, but thinking in a range of 50$
+        USD. It will help me to move the project ahead.
+      </p>
+
+      <p>
+        To get <strong>notified when it will be available</strong> you can
+        <a href="https://x.com/roman_koshchei">DM me on X</a> or fill out this
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSc0VdrAVMks8eEuaF0lQySeoYgJBRoQZZ2BJdL5_uO47hwxBg/viewform?usp=header"
+          >Google Form</a
+        >
+        (haha, software engineer can't even make own form submissions. bro, i
+        don't want to bother, dm me if you don't want to submit damn google
+        form)
+      </p>
+
+      <h2 id="vibe-coded-slop-version">Vibe Coded Slop Version</h2>
+
+      <p>
+        I needed this tool before, so I mostly vibe coded something working. But
+        it's slow af at this point, I wait 3-5 minutes to load single dataset. I
+        also want to open several dataset in the same application instance and
+        transfer or copy dataset item from one to another. There is a bunch of
+        bugs as well. That's why the rewrite.
+      </p>
+
+      <p>
+        Here are some pictures of vibe coded slop version on non-sensitive
+        dataset. Design isn't bad (it's a tool after all), but UX isn't great.
+      </p>
+
+      <img
+        src="/assets/yolo-dataset-visualizer-1.png"
+        alt="Old dataset visualizer list of images and their detections"
+      />
+      <img
+        src="/assets/yolo-dataset-visualizer-2.png"
+        alt="Old dataset visualizer editing detections"
+      />
+    </main>
+
+    <footer style="padding: 25px 0">Made in Ukraine.</footer>
+  </body>
+</html>
