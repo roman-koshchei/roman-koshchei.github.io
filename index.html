@@ -136,7 +136,8 @@
             a:hover {
                 text-decoration-thickness: 0.3ex;
             }
-            img {
+            img,
+            video {
                 display: block;
                 max-width: 100%;
                 height: auto;
@@ -357,19 +358,30 @@
                 <li>cool engineers of any kind</li>
             </ul>
 
-            <h2>Product</h2>
+            <h2>Drone Avoidance Module</h2>
             <p>
-                Module with installed software and AI model expected in range of
-                100-150$.
+                Automatically maneuvers a UAV away from a drone approaching from
+                behind. When a rear-facing camera detects the drone with high
+                confidence, the module steers the UAV away from it. The video
+                shows the system being tested in simulation.
             </p>
             <p>
-                Module will find objects and operator will be able to select
-                main one to focus on. Or use fully autonomous mode when best
-                recognized object would be tracked as main without human
-                intervention.
+                The estimated price is $250-300, including a single-board
+                computer, daylight camera, and all software. It may be lower
+                when buying electronics in bulk.
             </p>
-
-            <img src="/assets/board.png" alt="Module board" />
+            <video
+                controls
+                playsinline
+                preload="metadata"
+                poster="/assets/drone-avoidance-poster.jpg"
+                width="1920"
+                height="1080"
+            >
+                <source src="/assets/drone-avoidance.mp4" type="video/mp4" />
+                Your browser does not support embedded video.
+                <a href="/assets/drone-avoidance.mp4">Download the video</a>.
+            </video>
 
             <h2>Tools</h2>
             <p>
