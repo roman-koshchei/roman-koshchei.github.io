@@ -64,205 +64,7 @@
             href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E⭕%3C/text%3E%3C/svg%3E"
         />
 
-        <style>
-            /* Font */
-            @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-
-            /* Settings */
-            :root {
-                --color-dark: #1a1a1a;
-                --color-light: #fafafa;
-                --color-primary: #1a8fe3;
-                --size-step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
-                --size-step-1: clamp(1.25rem, calc(1.16rem + 0.43vw), 1.5rem);
-                --size-step-2: clamp(1.56rem, calc(1.41rem + 0.76vw), 2rem);
-                --size-step-3: clamp(1.95rem, calc(1.71rem + 1.24vw), 2.66rem);
-                --size-step-4: clamp(2.44rem, calc(2.05rem + 1.93vw), 3.55rem);
-                --spacing: 1.5rem;
-                --font-stack:
-                    Inter, system-ui, -apple-system, BlinkMacSystemFont,
-                    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-                    sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-                    "Segoe UI Symbol", "Noto Color Emoji";
-                --code-background-color: var(--color-dark);
-                --code-color: var(--color-light);
-            }
-            @media (prefers-color-scheme: dark) {
-                :root {
-                    --color-dark: #fafafa;
-                    --color-light: #1a1a1a;
-                }
-            }
-            /* HTML Styles */
-            body {
-                background: var(--color-light);
-                color: var(--color-dark);
-                padding: var(--spacing)
-                    clamp(
-                        calc(var(--spacing) / 2),
-                        5vw,
-                        calc(var(--spacing) * 3)
-                    );
-                font-family: var(--font-stack);
-                font-size: var(--size-step-1);
-                line-height: 1.7;
-                display: flex;
-                flex-direction: column;
-                min-height: 100vh;
-                margin: 0;
-            }
-            * {
-                box-sizing: border-box;
-            }
-            header,
-            main,
-            footer {
-                width: 100%;
-            }
-            header {
-                padding-bottom: var(--spacing);
-            }
-            main {
-                flex: 1;
-                padding-bottom: calc(var(--spacing) * 2);
-            }
-            a {
-                color: currentColor;
-                -webkit-text-decoration-color: var(--color-primary);
-                text-decoration-color: var(--color-primary);
-                text-decoration-thickness: 0.2ex;
-                text-underline-offset: 0.3ex;
-            }
-            a:hover {
-                text-decoration-thickness: 0.3ex;
-            }
-            img,
-            video {
-                display: block;
-                max-width: 100%;
-                height: auto;
-            }
-            h1,
-            h2,
-            h3,
-            h4,
-            h5 {
-                font-weight: 800;
-                line-height: 1.3;
-                text-wrap: balance;
-            }
-            h1 {
-                font-size: var(--size-step-4);
-            }
-            h2 {
-                font-size: var(--size-step-3);
-            }
-            h3 {
-                font-size: var(--size-step-2);
-            }
-            h4 {
-                font-size: var(--size-step-1);
-            }
-            h5 {
-                font-size: var(--size-step-0);
-            }
-            ul,
-            ol {
-                -webkit-padding-start: var(--spacing);
-                padding-inline-start: var(--spacing);
-            }
-            li {
-                --flow-space: var(--spacing);
-                margin-block-start: var(--flow-space, var(--spacing));
-            }
-            blockquote {
-                -webkit-padding-start: var(--spacing);
-                padding-inline-start: var(--spacing);
-                -webkit-border-start: 0.3em solid;
-                border-inline-start: 0.3em solid;
-                font-style: italic;
-                font-size: var(--size-step-1);
-            }
-            /* Utilities */
-            content > div > * {
-                -webkit-margin-before: var(--flow-space, var(--spacing));
-                margin-block-start: var(--flow-space, var(--spacing));
-            }
-            /* Flow and rythm */
-            :is(h1, h2, h3, h4, h5, blockquote) {
-                --flow-space: calc(var(--spacing) * 2);
-                margin-block-end: calc(var(--spacing) / 2);
-            }
-            :is(h1, h2, h3, h4, h5) + * {
-                --flow-space: calc(var(--spacing) / 3);
-            }
-            :is(h1, h2, h3, h4, h5) + :where(h2, h3, h4, h5) {
-                --flow-space: calc(var(--spacing) * 2);
-            }
-
-            /* Line lengths */
-            main,
-            header,
-            footer {
-                max-width: 65ch;
-                margin-inline: auto;
-            }
-            blockquote {
-                max-width: 50ch;
-            }
-            h1 {
-                max-width: 24ch;
-            }
-            h2,
-            h3 {
-                max-width: 32ch;
-            }
-            /* Bear Content */
-            .title {
-                text-decoration: none;
-            }
-            .title h1 {
-                font-size: var(--size-step-2);
-            }
-            nav p {
-                display: flex;
-                flex-wrap: wrap;
-                gap: var(--spacing);
-                row-gap: 0;
-            }
-            ul.blog-posts {
-                list-style-type: none;
-                padding: unset;
-            }
-            ul.blog-posts li {
-                display: flex;
-                flex-direction: column;
-            }
-            @media screen and (min-width: 600px) {
-                ul.blog-posts li {
-                    flex-direction: row;
-                    gap: calc(var(--spacing) / 2);
-                }
-            }
-            ul.blog-posts li span {
-                min-width: 11ch;
-            }
-            .highlight,
-            .code {
-                padding: 1px var(--spacing);
-                background-color: var(--code-background-color);
-                color: var(--code-color);
-                border-radius: 3px;
-                overflow-x: auto;
-                line-height: 1.2;
-            }
-            table {
-                width: 100%;
-            }
-            th {
-                text-align: left;
-            }
-        </style>
+        <link rel="stylesheet" href="/style.css" />
 
         <script
             defer
@@ -284,147 +86,172 @@
             </nav>
         </header>
         <main>
-            <p>
-                Single-person R&amp;D focused on autonomous systems for UAVs that
-                run in real time on affordable (~$150) hardware to detect and
-                track objects.
-            </p>
-            <nav aria-label="Sections">
-                <ul>
-                    <li>
+            <div class="prose">
+                <p>
+                    Single-person R&amp;D focused on autonomous systems for UAVs
+                    that run in real time on affordable (~$150) hardware to
+                    detect and track objects.
+                </p>
+                <nav aria-label="Sections">
+                    <p>
                         <a href="#detection-model-demo">Detection demo</a>
-                    </li>
-                    <li><a href="#wifi-broadcast-hat">5GHz HAT</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#drone-avoidance">Drone avoidance</a></li>
-                    <li><a href="#tools">Tools</a></li>
-                </ul>
-            </nav>
-
-            <h2 id="detection-model-demo">Detection model demo</h2>
-            <p>
-                We like to show the results each time we have progress, so this
-                is latest demonstration.
-            </p>
-            <div>
-                <iframe
-                    width="560"
-                    height="315"
-                    style="width: 100%; height: auto; aspect-ratio: 560 / 315"
-                    src="https://www.youtube-nocookie.com/embed/HH42tRs9e-8?si=7NsITEroCDKtiBlT"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="
-                        accelerometer;
-                        autoplay;
-                        clipboard-write;
-                        encrypted-media;
-                        gyroscope;
-                        picture-in-picture;
-                        web-share;
-                    "
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                ></iframe>
+                        <a href="#drone-avoidance">Drone avoidance</a>
+                        <a href="#wifi-broadcast-hat">5GHz HAT</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#tools">Tools</a>
+                    </p>
+                </nav>
             </div>
 
-            <h2 id="wifi-broadcast-hat">5GHz WiFi Broadcast HAT</h2>
-            <p>
-                An open-source 5GHz WiFi Broadcast HAT for FPV video
-                transmission and long-range communications.
-            </p>
-            <ul>
-                <li>
-                    <strong>Chipset:</strong> RTL8812EU in a BL-M8812EU2 module
-                </li>
-                <li><strong>Frequencies:</strong> 5.15 to 5.85 GHz</li>
-            </ul>
-            <p>
-                The KiCad design files, driver information, and safety notes are
-                available in the
-                <a
-                    href="https://github.com/roman-koshchei/5ghz_wifibroadcast_hat"
-                    >GitHub repository</a
-                >.
-            </p>
-            <a href="https://github.com/roman-koshchei/5ghz_wifibroadcast_hat">
-                <img
-                    src="/assets/5ghz-wifibroadcast-hat-kicad-preview.png"
-                    alt="KiCad rendering of the 5GHz WiFi Broadcast HAT"
-                    width="758"
-                    height="645"
-                    loading="lazy"
-                />
-            </a>
-
-            <h2 id="contact">Contact</h2>
-            <p>
-                Send me DM on X:
-                <a href="https://x.com/roman_koshchei" target="_blank"
-                    >@roman_koshchei</a
-                >. We would be interested to talk with:
-            </p>
-            <ul>
-                <li>potential investors or partners</li>
-                <li>cool engineers of any kind</li>
-            </ul>
-
-            <h2 id="drone-avoidance">Drone Avoidance Module</h2>
-            <p>
-                Automatically maneuvers a UAV away from a drone approaching from
-                behind. When a rear-facing camera detects the drone with high
-                confidence, the module steers the UAV away from it. The video
-                shows the system being tested in simulation.
-            </p>
-            <p>
-                The estimated price is $250-300, including a single-board
-                computer, daylight camera, and all software. It may be lower
-                when buying electronics in bulk.
-            </p>
-            <video
-                controls
-                playsinline
-                preload="metadata"
-                poster="/assets/drone-avoidance-poster.jpg"
-                width="1920"
-                height="1080"
-            >
-                <source src="/assets/drone-avoidance.mp4" type="video/mp4" />
-                Your browser does not support embedded video.
-                <a href="/assets/drone-avoidance.mp4">Download the video</a>.
-            </video>
-
-            <h2 id="tools">Tools</h2>
-            <p>
-                Here are some Open Source tools we developed for ourself. You
-                can check them out:
-            </p>
-            <ul>
-                <li>
+            <section class="split">
+                <div>
+                    <h2 id="detection-model-demo">Detection model demo</h2>
                     <p>
-                        <a
-                            href="https://github.com/roman-koshchei/yolo-auto-annotation"
-                            >YOLO Auto Annotation</a
-                        >
-                        creates YOLO dataset from specified images using
-                        Moondream AI model to find bounding boxes for your
-                        classes. It reduces time required to go through images
-                        and annotate them yourself.
+                        We like to show the results each time we have progress,
+                        so this is latest demonstration.
                     </p>
-                </li>
-                <li>
+                </div>
+                <div>
+                    <iframe
+                        width="560"
+                        height="315"
+                        style="width: 100%; height: auto; aspect-ratio: 560 / 315"
+                        src="https://www.youtube-nocookie.com/embed/HH42tRs9e-8?si=7NsITEroCDKtiBlT"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="
+                            accelerometer;
+                            autoplay;
+                            clipboard-write;
+                            encrypted-media;
+                            gyroscope;
+                            picture-in-picture;
+                            web-share;
+                        "
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </section>
+
+            <section class="split">
+                <div>
+                    <h2 id="drone-avoidance">Drone Avoidance Module</h2>
                     <p>
-                        <a
-                            href="https://github.com/roman-koshchei/yolo-dataset-visualizer"
-                            >YOLO Dataset Visualizer</a
-                        >
-                        allows to scroll through dataset and see bounding boxes
-                        on images. You can remove image from dataset if bounding
-                        boxes are incorrect. I use it after Auto Annotation to
-                        remove occasional mistakes.
+                        Automatically maneuvers a UAV away from a drone
+                        approaching from behind. When a rear-facing camera
+                        detects the drone with high confidence, the module steers
+                        the UAV away from it. The video shows the system being
+                        tested in simulation.
                     </p>
-                </li>
-            </ul>
+                    <p>
+                        The estimated price is $250-300, including a single-board
+                        computer, daylight camera, and all software. It may be
+                        lower when buying electronics in bulk.
+                    </p>
+                </div>
+                <div>
+                    <video
+                        controls
+                        playsinline
+                        preload="metadata"
+                        poster="/assets/drone-avoidance-poster.jpg"
+                        width="1920"
+                        height="1080"
+                    >
+                        <source
+                            src="/assets/drone-avoidance.mp4"
+                            type="video/mp4"
+                        />
+                        Your browser does not support embedded video.
+                        <a href="/assets/drone-avoidance.mp4">Download the video</a>.
+                    </video>
+                </div>
+            </section>
+
+            <section class="split">
+                <div>
+                    <h2 id="wifi-broadcast-hat">5GHz WiFi Broadcast HAT</h2>
+                    <p>
+                        An open-source 5GHz WiFi Broadcast HAT for FPV video
+                        transmission and long-range communications.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Chipset:</strong> RTL8812EU in a BL-M8812EU2
+                            module
+                        </li>
+                        <li><strong>Frequencies:</strong> 5.15 to 5.85 GHz</li>
+                    </ul>
+                    <p>
+                        The KiCad design files, driver information, and safety
+                        notes are available in the
+                        <a
+                            href="https://github.com/roman-koshchei/5ghz_wifibroadcast_hat"
+                            >GitHub repository</a
+                        >.
+                    </p>
+                </div>
+                <div>
+                    <a
+                        href="https://github.com/roman-koshchei/5ghz_wifibroadcast_hat"
+                    >
+                        <img
+                            src="/assets/5ghz-wifibroadcast-hat-kicad-preview.png"
+                            alt="KiCad rendering of the 5GHz WiFi Broadcast HAT"
+                            width="758"
+                            height="645"
+                            loading="lazy"
+                        />
+                    </a>
+                </div>
+            </section>
+
+            <div class="prose">
+                <h2 id="contact">Contact</h2>
+                <p>
+                    Send me DM on X:
+                    <a href="https://x.com/roman_koshchei" target="_blank"
+                        >@roman_koshchei</a
+                    >. We would be interested to talk with:
+                </p>
+                <ul>
+                    <li>potential investors or partners</li>
+                    <li>cool engineers of any kind</li>
+                </ul>
+
+                <h2 id="tools">Tools</h2>
+                <p>
+                    Here are some Open Source tools we developed for ourself. We
+                    can check them out:
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            <a
+                                href="https://github.com/roman-koshchei/yolo-auto-annotation"
+                                >YOLO Auto Annotation</a
+                            >
+                            creates YOLO dataset from specified images using
+                            Moondream AI model to find bounding boxes for your
+                            classes. It reduces time required to go through images
+                            and annotate them yourself.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a
+                                href="https://github.com/roman-koshchei/yolo-dataset-visualizer"
+                                >YOLO Dataset Visualizer</a
+                            >
+                            allows to scroll through dataset and see bounding
+                            boxes on images. You can remove image from dataset if
+                            bounding boxes are incorrect. I use it after Auto
+                            Annotation to remove occasional mistakes.
+                        </p>
+                    </li>
+                </ul>
+            </div>
         </main>
 
         <footer style="padding: 25px 0">Made in Ukraine.</footer>
