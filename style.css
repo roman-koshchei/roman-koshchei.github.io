@@ -153,9 +153,6 @@ nav p {
     gap: var(--spacing);
     margin-block-end: calc(var(--spacing) * 2);
 }
-.split > :last-child {
-    align-self: center;
-}
 /* Readable measure, kept in step with the section text columns on desktop */
 .prose {
     max-width: 65ch;
@@ -200,6 +197,6 @@ footer > :last-child {
     .split {
         grid-template-columns: 1.15fr 0.85fr;
         column-gap: calc(var(--spacing) * 2);
-        align-items: start;
+        align-items: center;
     }
 }
