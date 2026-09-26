@@ -163,6 +163,12 @@ nav p {
 .prose:not(:last-child) {
     margin-block-end: calc(var(--spacing) * 2);
 }
+/* The section jump list is a secondary element, so it gets extra room before
+   the first section instead of the standard 48px break. The :not() is repeated
+   to outrank the rule above. */
+.prose:has(> nav):not(:last-child) {
+    margin-block-end: calc(var(--spacing) * 3);
+}
 footer {
     padding: var(--spacing) 0;
 }

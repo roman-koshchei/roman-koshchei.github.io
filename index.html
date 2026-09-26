@@ -8,7 +8,11 @@
         <link rel="canonical" href="https://koshchei.systems/" />
 
         <link rel="alternate" hreflang="en" href="https://koshchei.systems/" />
-        <link rel="alternate" hreflang="uk" href="https://koshchei.systems/ua" />
+        <link
+            rel="alternate"
+            hreflang="uk"
+            href="https://koshchei.systems/ua"
+        />
         <link
             rel="alternate"
             hreflang="x-default"
@@ -39,10 +43,7 @@
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://koshchei.systems/" />
-        <meta
-            property="twitter:title"
-            content="Koshchei Systems"
-        />
+        <meta property="twitter:title" content="Koshchei Systems" />
         <meta
             property="twitter:description"
             content="Single-person R&amp;D focused on autonomous systems for UAVs that run in real time on affordable (~$150) hardware to detect and track objects."
@@ -95,12 +96,11 @@
             <div class="prose">
                 <p>
                     Single-person R&amp;D focused on autonomous systems for UAVs
-                    that run in real time on affordable (~$150) hardware to
-                    detect and track objects.
+                    that run in real time on affordable hardware.
                 </p>
                 <nav aria-label="Sections">
                     <p>
-                        <a href="#detection-model-demo">Detection demo</a>
+                        <a href="#uav-detection-model">UAV Detection</a>
                         <a href="#drone-avoidance">Drone avoidance</a>
                         <a href="#wifi-broadcast-hat">5GHz HAT</a>
                         <a href="#tools">Tools</a>
@@ -110,17 +110,21 @@
 
             <section class="split">
                 <div>
-                    <h2 id="detection-model-demo">Detection model demo</h2>
+                    <h2 id="uav-detection-model">UAV detection model</h2>
                     <p>
-                        We like to show the results each time we have progress,
-                        so this is latest demonstration.
+                        Preview of the model running on real-world UAV chasing
+                        video. We are getting 30-45FPS on the 150$ hardware.
                     </p>
                 </div>
                 <div>
                     <iframe
                         width="560"
                         height="315"
-                        style="width: 100%; height: auto; aspect-ratio: 560 / 315"
+                        style="
+                            width: 100%;
+                            height: auto;
+                            aspect-ratio: 560 / 315;
+                        "
                         src="https://www.youtube-nocookie.com/embed/HH42tRs9e-8?si=7NsITEroCDKtiBlT"
                         title="YouTube video player"
                         frameborder="0"
@@ -145,14 +149,15 @@
                     <p>
                         Automatically maneuvers a UAV away from a drone
                         approaching from behind. When a rear-facing camera
-                        detects the drone with high confidence, the module steers
-                        the UAV away from it. The video shows the system being
-                        tested in simulation.
+                        detects the drone with high confidence, the module
+                        steers the UAV away from it. The video shows the system
+                        being tested in simulation.
                     </p>
                     <p>
-                        The estimated price is $250-300, including a single-board
-                        computer, daylight camera, and all software. It may be
-                        lower when buying electronics in bulk.
+                        The estimated price is $250-300, including a
+                        single-board computer, daylight camera, and all
+                        software. It may be lower when buying electronics in
+                        bulk.
                     </p>
                 </div>
                 <div>
@@ -169,7 +174,9 @@
                             type="video/mp4"
                         />
                         Your browser does not support embedded video.
-                        <a href="/assets/drone-avoidance.mp4">Download the video</a>.
+                        <a href="/assets/drone-avoidance.mp4"
+                            >Download the video</a
+                        >.
                     </video>
                 </div>
             </section>
@@ -227,8 +234,8 @@
                             >
                             creates YOLO dataset from specified images using
                             Moondream AI model to find bounding boxes for your
-                            classes. It reduces time required to go through images
-                            and annotate them yourself.
+                            classes. It reduces time required to go through
+                            images and annotate them yourself.
                         </p>
                     </li>
                     <li>
@@ -238,8 +245,8 @@
                                 >YOLO Dataset Visualizer</a
                             >
                             allows to scroll through dataset and see bounding
-                            boxes on images. You can remove image from dataset if
-                            bounding boxes are incorrect. I use it after Auto
+                            boxes on images. You can remove image from dataset
+                            if bounding boxes are incorrect. I use it after Auto
                             Annotation to remove occasional mistakes.
                         </p>
                     </li>
