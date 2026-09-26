@@ -55,7 +55,9 @@ header {
 }
 main {
     flex: 1;
-    padding-bottom: calc(var(--spacing) * 2);
+    /* the last block already contributes its own trailing margin, so this
+       padding only needs to top the total up to one full step */
+    padding-bottom: var(--spacing);
 }
 a {
     color: currentColor;
@@ -103,13 +105,13 @@ ol {
     padding-inline-start: var(--spacing);
 }
 li {
-    --flow-space: var(--spacing);
-    margin-block-start: var(--flow-space, var(--spacing));
+    --flow-space: 1em;
+    margin-block-start: var(--flow-space, 1em);
 }
 /* Flow and rythm */
 :is(h1, h2, h3, h4, h5) {
     --flow-space: calc(var(--spacing) * 2);
-    margin-block-end: calc(var(--spacing) / 2);
+    margin-block: 0 calc(var(--spacing) / 2);
 }
 :is(h1, h2, h3, h4, h5) + * {
     --flow-space: calc(var(--spacing) / 3);
@@ -151,11 +153,27 @@ nav p {
     gap: var(--spacing);
     margin-block-end: calc(var(--spacing) * 2);
 }
-.split > :first-child {
-    margin-block-start: 0;
-}
 .split > :last-child {
     align-self: center;
+}
+/* Readable measure, kept in step with the section text columns on desktop */
+.prose {
+    max-width: 65ch;
+}
+.prose:not(:last-child) {
+    margin-block-end: calc(var(--spacing) * 2);
+}
+footer {
+    padding: var(--spacing) 0;
+}
+footer p {
+    margin-block: calc(var(--spacing) * 1.5);
+}
+footer > :first-child {
+    margin-block-start: 0;
+}
+footer > :last-child {
+    margin-block-end: 0;
 }
 @media screen and (min-width: 60em) {
     header,
@@ -171,7 +189,7 @@ nav p {
         gap: var(--spacing);
     }
     .prose {
-        max-width: 65ch;
+        max-width: 48ch;
     }
     .split {
         grid-template-columns: 1.15fr 0.85fr;
