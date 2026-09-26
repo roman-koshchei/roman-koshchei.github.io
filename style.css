@@ -181,6 +181,13 @@ nav p {
     footer {
         max-width: 96ch;
     }
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: var(--spacing);
+    }
     .prose {
         max-width: 65ch;
     }
