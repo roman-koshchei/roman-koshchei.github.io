@@ -17,8 +17,6 @@
         "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
         sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
         "Segoe UI Symbol", "Noto Color Emoji";
-    --code-background-color: var(--color-dark);
-    --code-color: var(--color-light);
 }
 @media (prefers-color-scheme: dark) {
     :root {
@@ -108,21 +106,8 @@ li {
     --flow-space: var(--spacing);
     margin-block-start: var(--flow-space, var(--spacing));
 }
-blockquote {
-    -webkit-padding-start: var(--spacing);
-    padding-inline-start: var(--spacing);
-    -webkit-border-start: 0.3em solid;
-    border-inline-start: 0.3em solid;
-    font-style: italic;
-    font-size: var(--size-step-1);
-}
-/* Utilities */
-content > div > * {
-    -webkit-margin-before: var(--flow-space, var(--spacing));
-    margin-block-start: var(--flow-space, var(--spacing));
-}
 /* Flow and rythm */
-:is(h1, h2, h3, h4, h5, blockquote) {
+:is(h1, h2, h3, h4, h5) {
     --flow-space: calc(var(--spacing) * 2);
     margin-block-end: calc(var(--spacing) / 2);
 }
@@ -140,9 +125,6 @@ footer {
     max-width: 65ch;
     margin-inline: auto;
 }
-blockquote {
-    max-width: 50ch;
-}
 h1 {
     max-width: 24ch;
 }
@@ -151,11 +133,11 @@ h3 {
     max-width: 32ch;
 }
 /* Bear Content */
+header h1 {
+    font-size: var(--size-step-2);
+}
 .title {
     text-decoration: none;
-}
-.title h1 {
-    font-size: var(--size-step-2);
 }
 nav p {
     display: flex;
@@ -192,40 +174,8 @@ nav p {
         max-width: 65ch;
     }
     .split {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1.15fr 0.85fr;
         column-gap: calc(var(--spacing) * 2);
         align-items: start;
     }
-}
-ul.blog-posts {
-    list-style-type: none;
-    padding: unset;
-}
-ul.blog-posts li {
-    display: flex;
-    flex-direction: column;
-}
-@media screen and (min-width: 600px) {
-    ul.blog-posts li {
-        flex-direction: row;
-        gap: calc(var(--spacing) / 2);
-    }
-}
-ul.blog-posts li span {
-    min-width: 11ch;
-}
-.highlight,
-.code {
-    padding: 1px var(--spacing);
-    background-color: var(--code-background-color);
-    color: var(--code-color);
-    border-radius: 3px;
-    overflow-x: auto;
-    line-height: 1.2;
-}
-table {
-    width: 100%;
-}
-th {
-    text-align: left;
 }
