@@ -94,6 +94,7 @@
           <p>
             <a href="#uav-detection-model">Розпізнавання БПЛА</a>
             <a href="#drone-avoidance">Ухилення від дронів</a>
+            <a href="#rl-control-policy">RL-керування</a>
             <a href="#wifi-broadcast-hat">5GHz HAT</a>
             <a href="#tools">Інструменти</a>
           </p>
@@ -150,6 +151,32 @@
             <source src="/assets/drone-avoidance.mp4" type="video/mp4" />
             Ваш браузер не підтримує вбудоване відео.
             <a href="/assets/drone-avoidance.mp4">Завантажити відео</a>.
+          </video>
+        </div>
+      </section>
+
+      <section class="split">
+        <div>
+          <h2 id="rl-control-policy">Нейромережеве RL-керування</h2>
+          <p>
+            Чиста модель навчання з підкріпленням, яка керує дроном-перехоплювачем
+            для більшої узагальненості та універсальності. Вона видає безпосередні
+            RC-команди й не залежить від синхронізованих даних кадрів та IMU, що
+            дозволяє обходитися без дорогого обладнання.
+          </p>
+        </div>
+        <div>
+          <video
+            controls
+            playsinline
+            preload="metadata"
+            poster="/assets/rl-poster.jpg"
+            width="1920"
+            height="1080"
+          >
+            <source src="/assets/rl.mp4" type="video/mp4" />
+            Ваш браузер не підтримує вбудоване відео.
+            <a href="/assets/rl.mp4">Завантажити відео</a>.
           </video>
         </div>
       </section>
